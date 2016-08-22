@@ -21,7 +21,7 @@ namespace PokemonGo.RocketAPI.Logic.Tasks
             var fortId = currentFortData.Id;
             var pokemonId = currentFortData.LureInfo.ActivePokemonId;
 
-            if (Logic._client.Settings.UsePokemonToNotCatchList &&
+            if (Logic._client.Settings.UsePokemonDoNotCatchList &&
                 Logic._client.Settings.PokemonsToNotCatch.Contains(pokemonId))
             {
                 Logger.Write($"Ignore Pokemon - {pokemonId} - is on ToNotCatch List", LogLevel.Debug);

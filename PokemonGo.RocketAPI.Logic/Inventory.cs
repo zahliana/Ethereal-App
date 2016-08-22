@@ -34,8 +34,8 @@ namespace PokemonGo.RocketAPI.Logic
             myPokemons = myPokemons.Where(p => p.DeployedFortId == string.Empty);
             if (Logic._client.Settings.UsePokemonToEvolveList && filter != null)
                 myPokemons = myPokemons.Where(p => filter.Contains(p.PokemonId));
-            if (Logic._client.Settings.EvolveOnlyPokemonAboveIV)
-                myPokemons = myPokemons.Where(p => PokemonInfo.CalculatePokemonPerfection(p) >= Logic._client.Settings.EvolveOnlyPokemonAboveIVValue);
+            if (Logic._client.Settings.EvolvePokemonAboveIV)
+                myPokemons = myPokemons.Where(p => PokemonInfo.CalculatePokemonPerfection(p) >= Logic._client.Settings.EvolvePokemonAboveIVValue);
             myPokemons = prioritizeIVoverCp ? myPokemons.OrderByDescending(PokemonInfo.CalculatePokemonPerfection) : myPokemons.OrderByDescending(p => p.Cp);
 
             var pokemons = myPokemons.ToList();
@@ -62,10 +62,10 @@ namespace PokemonGo.RocketAPI.Logic
                         settings.CandyToEvolve;
 
                 var familiecandies = familyCandy.Candy_;
-                if (Logic._client.Settings.EvolveKeepCandiesValue > 0)
+                if (Logic._client.Settings.EvolveCandyAmountToEvolve > 0)
                 {
-                    if (familyCandy.Candy_ <= Logic._client.Settings.EvolveKeepCandiesValue) continue;
-                    familiecandies = familyCandy.Candy_ - Logic._client.Settings.EvolveKeepCandiesValue;
+                    if (familyCandy.Candy_ <= Logic._client.Settings.EvolveCandyAmountToEvolve) continue;
+                    familiecandies = familyCandy.Candy_ - Logic._client.Settings.EvolveCandyAmountToEvolve;
                     if (familiecandies - pokemonCandyNeededAlready > settings.CandyToEvolve)
                         pokemonToEvolve.Add(pokemon);
                 }
@@ -148,12 +148,12 @@ namespace PokemonGo.RocketAPI.Logic
                 keepPokemonsList = keepPokemonsList.Union(myPokemons.Where(p => filter.Contains(p.PokemonId)).Select(n => n.Id).ToList());
 
             // Keep any that have CP higher than my KeepAboveCP setting
-            if (Logic._client.Settings.UseTransferPokemonKeepAllAboveCP)
-                keepPokemonsList = keepPokemonsList.Union(myPokemons.Where(p => p.Cp >= Logic._client.Settings.TransferPokemonKeepAllAboveCPValue).Select(n => n.Id).ToList());
+            if (Logic._client.Settings.UseTransferPokemonKeepAboveCP)
+                keepPokemonsList = keepPokemonsList.Union(myPokemons.Where(p => p.Cp >= Logic._client.Settings.TransferPokemonKeepAboveCPValue).Select(n => n.Id).ToList());
 
             // Keep any that have higher IV than my KeepAboveIV setting
-            if (Logic._client.Settings.UseTransferPokemonKeepAllAboveIV)
-                keepPokemonsList = keepPokemonsList.Union(myPokemons.Where(p => PokemonInfo.CalculatePokemonPerfection(p) >= Logic._client.Settings.TransferPokemonKeepAllAboveIVValue).Select(n => n.Id).ToList());
+            if (Logic._client.Settings.UseTransferPokemonKeepAboveIV)
+                keepPokemonsList = keepPokemonsList.Union(myPokemons.Where(p => PokemonInfo.CalculatePokemonPerfection(p) >= Logic._client.Settings.TransferPokemonKeepAboveIVValue).Select(n => n.Id).ToList());
 
             // Remove any that are not in my Keep list
             IEnumerable<PokemonData> pokemonList = myPokemons.Where(p => !keepPokemonsList.Contains(p.Id)).OrderBy(p => p.PokemonId).ToList();

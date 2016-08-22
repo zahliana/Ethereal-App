@@ -198,7 +198,7 @@ namespace PokemonGo.RocketAPI.Logic
 
                     await RecycleItemsTask.Execute();
                     if (_client.Settings.UseLuckyEggs) await UseLuckyEggTask.Execute();
-                    if (_client.Settings.EvolvePokemon || _client.Settings.EvolveOnlyPokemonAboveIV) await EvolvePokemonTask.Execute();
+                    if (_client.Settings.EvolvePokemon || _client.Settings.EvolvePokemonAboveIV) await EvolvePokemonTask.Execute();
                     if (_client.Settings.TransferPokemon) await TransferPokemonTask.Execute();
                     await ExportPokemonToCsv.Execute(_playerProfile.PlayerData);
                     if (_clientSettings.HatchEggs) await HatchEggsTask.Execute();

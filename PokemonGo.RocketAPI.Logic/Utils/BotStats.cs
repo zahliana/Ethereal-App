@@ -61,7 +61,7 @@ namespace PokemonGo.RocketAPI.Logic.Utils
 
         public static string GetUsername(GetPlayerResponse profile)
         {
-            return _playerName = Logic._client.Settings.AuthType == AuthType.Ptc ? Logic._client.Settings.PtcUsername : profile.PlayerData.Username;
+            return _playerName = Logic._client.Settings.AuthType == AuthType.Ptc ? Logic._client.Settings.PTCUsername : profile.PlayerData.Username;
         }
 
         public static double GetRuntime()

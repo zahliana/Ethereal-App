@@ -121,10 +121,10 @@ namespace PokemonGo.RocketAPI.Logic.Tasks
             if (masterBalls && pokemonCp >= 1500)
                 return ItemId.ItemMasterBall;
 
-            if (ultraBalls && (pokemonCp >= 1000 || (iV >= Logic._client.Settings.TransferPokemonKeepAllAboveIVValue && probability < 0.40)))
+            if (ultraBalls && (pokemonCp >= 1000 || (iV >= Logic._client.Settings.TransferPokemonKeepAboveIVValue && probability < 0.40)))
                 return ItemId.ItemUltraBall;
 
-            if (greatBalls && (pokemonCp >= 300 || (iV >= Logic._client.Settings.TransferPokemonKeepAllAboveIVValue && probability < 0.50)))
+            if (greatBalls && (pokemonCp >= 300 || (iV >= Logic._client.Settings.TransferPokemonKeepAboveIVValue && probability < 0.50)))
                 return ItemId.ItemGreatBall;
 
             return balls.OrderBy(g => g.Key).First().Key;
@@ -169,10 +169,10 @@ namespace PokemonGo.RocketAPI.Logic.Tasks
             if (weparBerryCount > 0 && pokemonCp >= 1500)
                 return ItemId.ItemWeparBerry;
 
-            if (nanabBerryCount > 0 && (pokemonCp >= 1000 || (iV >= Logic._client.Settings.TransferPokemonKeepAllAboveIVValue && probability < 0.40)))
+            if (nanabBerryCount > 0 && (pokemonCp >= 1000 || (iV >= Logic._client.Settings.TransferPokemonKeepAboveIVValue && probability < 0.40)))
                 return ItemId.ItemNanabBerry;
 
-            if (blukBerryCount > 0 && (pokemonCp >= 500 || (iV >= Logic._client.Settings.TransferPokemonKeepAllAboveIVValue && probability < 0.50)))
+            if (blukBerryCount > 0 && (pokemonCp >= 500 || (iV >= Logic._client.Settings.TransferPokemonKeepAboveIVValue && probability < 0.50)))
                 return ItemId.ItemBlukBerry;
 
             if (razzBerryCount > 0 && pokemonCp >= 300)

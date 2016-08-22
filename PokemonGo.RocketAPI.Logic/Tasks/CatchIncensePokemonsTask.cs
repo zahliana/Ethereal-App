@@ -32,7 +32,7 @@ namespace PokemonGo.RocketAPI.Logic.Tasks
                     SpawnPointId = incensePokemon.EncounterLocation
                 };
 
-                if (Logic._client.Settings.UsePokemonToNotCatchList &&
+                if (Logic._client.Settings.UsePokemonDoNotCatchList &&
                     Logic._client.Settings.PokemonsToNotCatch.Contains(pokemon.PokemonId))
                 {
                     Logger.Write($"Ignore Pokemon - {pokemon.PokemonId} - is on ToNotCatch List", LogLevel.Debug);
@@ -48,7 +48,7 @@ namespace PokemonGo.RocketAPI.Logic.Tasks
                     Logger.Write($"Encounter problem: {encounter.Result}", LogLevel.Warning);
             }
 
-            if (Logic._client.Settings.EvolvePokemon || Logic._client.Settings.EvolveOnlyPokemonAboveIV) await EvolvePokemonTask.Execute();
+            if (Logic._client.Settings.EvolvePokemon || Logic._client.Settings.EvolvePokemonAboveIV) await EvolvePokemonTask.Execute();
             if (Logic._client.Settings.TransferPokemon) await TransferPokemonTask.Execute();
         }
     }
