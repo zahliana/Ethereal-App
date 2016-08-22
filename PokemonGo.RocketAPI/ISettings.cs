@@ -13,8 +13,8 @@ namespace PokemonGo.RocketAPI
     public interface ISettings
     {
         AuthType AuthType { get; }
-        string PtcPassword { get; }
-        string PtcUsername { get; }
+        string PTCPassword { get; }
+        string PTCUsername { get; }
         string GoogleEmail { get; }
         string GooglePassword { get; }
         double DefaultLatitude { get; }
@@ -23,27 +23,27 @@ namespace PokemonGo.RocketAPI
         bool UseGPXPathing { get; }
         string GPXFile { get; }
         bool GPXIgnorePokestops { get; }
-        double WalkingSpeedInKilometerPerHour { get; }
+        double WalkSpeedKPH { get; }
         int MaxTravelDistanceInMeters { get; }
-        bool UseTeleportInsteadOfWalking { get; }
+        bool TeleportInsteadOfWalk { get; }
 
-        bool UsePokemonToNotCatchList { get; }
+        bool UsePokemonDoNotCatchList { get; }
         bool UsePokemonToNotTransferList { get; }
         bool UsePokemonToEvolveList { get; }
         bool CatchPokemon { get; }
         bool CatchIncensePokemon { get; }
         bool CatchLuredPokemon { get; }
         bool EvolvePokemon { get; }
-        bool EvolveOnlyPokemonAboveIV { get; }
-        float EvolveOnlyPokemonAboveIVValue { get; }
-        int EvolveKeepCandiesValue { get; }
+        bool EvolvePokemonAboveIV { get; }
+        float EvolvePokemonAboveIVValue { get; }
+        int EvolveCandyAmountToEvolve { get; }
 
         bool TransferPokemon { get; }
-        bool NotTransferPokemonsThatCanEvolve { get; }
-        bool UseTransferPokemonKeepAllAboveCP { get; }
-        int TransferPokemonKeepAllAboveCPValue { get; }
-        bool UseTransferPokemonKeepAllAboveIV { get; }
-        float TransferPokemonKeepAllAboveIVValue { get; }
+        bool TransferPokemonKeepIfCanEvolve { get; }
+        bool UseTransferPokemonKeepAboveCP { get; }
+        int TransferPokemonKeepAboveCPValue { get; }
+        bool UseTransferPokemonKeepAboveIV { get; }
+        float TransferPokemonKeepAboveIVValue { get; }
         int TransferPokemonKeepAmountHighestCP { get; }
         int TransferPokemonKeepAmountHighestIV { get; }
 

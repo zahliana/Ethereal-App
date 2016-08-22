@@ -98,7 +98,7 @@ namespace PokemonGo.RocketAPI.Logic.Tasks
                     latlngDebug = $" | Latitude: {pokestop.Latitude} - Longitude: {pokestop.Longitude}";
                 Logger.Write($"Name: {fortInfo.Name} in {distance:0.##} m distance{lured}{latlngDebug}", LogLevel.Pokestop);
 
-                if (Logic._client.Settings.UseTeleportInsteadOfWalking)
+                if (Logic._client.Settings.TeleportInsteadOfWalk)
                 {
                     await
                         Logic._client.Player.UpdatePlayerLocation(pokestop.Latitude, pokestop.Longitude,

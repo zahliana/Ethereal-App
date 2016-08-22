@@ -29,16 +29,16 @@ namespace PokemonGo.RocketAPI.Console
             set { UserSettings.Default.AuthType = value.ToString(); }
         }
 
-        public string PtcUsername
+        public string PTCUsername
         {
-            get { return UserSettings.Default.PtcUsername; }
-            set { UserSettings.Default.PtcUsername = value; }
+            get { return UserSettings.Default.PTCUsername; }
+            set { UserSettings.Default.PTCUsername = value; }
         }
 
-        public string PtcPassword
+        public string PTCPassword
         {
-            get { return UserSettings.Default.PtcPassword; }
-            set { UserSettings.Default.PtcPassword = value; }
+            get { return UserSettings.Default.PTCPassword; }
+            set { UserSettings.Default.PTCPassword = value; }
         }
 
         public string GoogleEmail
@@ -89,10 +89,10 @@ namespace PokemonGo.RocketAPI.Console
             set { UserSettings.Default.GPXIgnorePokestops = value; }
         }
 
-        public double WalkingSpeedInKilometerPerHour
+        public double WalkSpeedKPH
         {
-            get { return UserSettings.Default.WalkingSpeedInKilometerPerHour; }
-            set { UserSettings.Default.WalkingSpeedInKilometerPerHour = value; }
+            get { return UserSettings.Default.WalkSpeedKPH; }
+            set { UserSettings.Default.WalkSpeedKPH = value; }
         }
 
         public int MaxTravelDistanceInMeters
@@ -101,16 +101,16 @@ namespace PokemonGo.RocketAPI.Console
             set { UserSettings.Default.MaxTravelDistanceInMeters = value; }
         }
 
-        public bool UseTeleportInsteadOfWalking
+        public bool TeleportInsteadOfWalk
         {
-            get { return UserSettings.Default.UseTeleportInsteadOfWalking; }
-            set { UserSettings.Default.UseTeleportInsteadOfWalking = value; }
+            get { return UserSettings.Default.TeleportInsteadOfWalk; }
+            set { UserSettings.Default.TeleportInsteadOfWalk = value; }
         }
 
-        public bool UsePokemonToNotCatchList
+        public bool UsePokemonDoNotCatchList
         {
-            get { return UserSettings.Default.UsePokemonToNotCatchList; }
-            set { UserSettings.Default.UsePokemonToNotCatchList = value; }
+            get { return UserSettings.Default.UsePokemonDoNotCatchList; }
+            set { UserSettings.Default.UsePokemonDoNotCatchList = value; }
         }
 
         public bool UsePokemonToNotTransferList
@@ -149,22 +149,22 @@ namespace PokemonGo.RocketAPI.Console
             set { UserSettings.Default.EvolvePokemon = value; }
         }
 
-        public bool EvolveOnlyPokemonAboveIV
+        public bool EvolvePokemonAboveIV
         {
-            get { return UserSettings.Default.EvolveOnlyPokemonAboveIV; }
-            set { UserSettings.Default.EvolveOnlyPokemonAboveIV = value; }
+            get { return UserSettings.Default.EvolvePokemonAboveIV; }
+            set { UserSettings.Default.EvolvePokemonAboveIV = value; }
         }
 
-        public float EvolveOnlyPokemonAboveIVValue
+        public float EvolvePokemonAboveIVValue
         {
-            get { return UserSettings.Default.EvolveOnlyPokemonAboveIVValue; }
-            set { UserSettings.Default.EvolveOnlyPokemonAboveIVValue = value; }
+            get { return UserSettings.Default.EvolvePokemonAboveIVValue; }
+            set { UserSettings.Default.EvolvePokemonAboveIVValue = value; }
         }
 
-        public int EvolveKeepCandiesValue
+        public int EvolveCandyAmountToEvolve
         {
-            get { return UserSettings.Default.EvolveKeepCandiesValue; }
-            set { UserSettings.Default.EvolveKeepCandiesValue = value; }
+            get { return UserSettings.Default.EvolveCandyAmountToEvolve; }
+            set { UserSettings.Default.EvolveCandyAmountToEvolve = value; }
         }
 
         public bool TransferPokemon
@@ -173,34 +173,34 @@ namespace PokemonGo.RocketAPI.Console
             set { UserSettings.Default.TransferPokemon = value; }
         }
 
-        public bool NotTransferPokemonsThatCanEvolve
+        public bool TransferPokemonKeepIfCanEvolve
         {
-            get { return UserSettings.Default.NotTransferPokemonsThatCanEvolve; }
-            set { UserSettings.Default.NotTransferPokemonsThatCanEvolve = value; }
+            get { return UserSettings.Default.TransferPokemonKeepIfCanEvolve; }
+            set { UserSettings.Default.TransferPokemonKeepIfCanEvolve = value; }
         }
 
-        public bool UseTransferPokemonKeepAllAboveCP
+        public bool UseTransferPokemonKeepAboveCP
         {
-            get { return UserSettings.Default.UseTransferPokemonKeepAllAboveCP; }
-            set { UserSettings.Default.UseTransferPokemonKeepAllAboveCP = value; }
+            get { return UserSettings.Default.UseTransferPokemonKeepAboveCP; }
+            set { UserSettings.Default.UseTransferPokemonKeepAboveCP = value; }
         }
 
-        public int TransferPokemonKeepAllAboveCPValue
+        public int TransferPokemonKeepAboveCPValue
         {
-            get { return UserSettings.Default.TransferPokemonKeepAllAboveCPValue; }
-            set { UserSettings.Default.TransferPokemonKeepAllAboveCPValue = value; }
+            get { return UserSettings.Default.TransferPokemonKeepAboveCPValue; }
+            set { UserSettings.Default.TransferPokemonKeepAboveCPValue = value; }
         }
 
-        public bool UseTransferPokemonKeepAllAboveIV
+        public bool UseTransferPokemonKeepAboveIV
         {
-            get { return UserSettings.Default.UseTransferPokemonKeepAllAboveIV; }
-            set { UserSettings.Default.UseTransferPokemonKeepAllAboveIV = value; }
+            get { return UserSettings.Default.UseTransferPokemonKeepAboveIV; }
+            set { UserSettings.Default.UseTransferPokemonKeepAboveIV = value; }
         }
 
-        public float TransferPokemonKeepAllAboveIVValue
+        public float TransferPokemonKeepAboveIVValue
         {
-            get { return UserSettings.Default.TransferPokemonKeepAllAboveIVValue; }
-            set { UserSettings.Default.TransferPokemonKeepAllAboveIVValue = value; }
+            get { return UserSettings.Default.TransferPokemonKeepAboveIVValue; }
+            set { UserSettings.Default.TransferPokemonKeepAboveIVValue = value; }
         }
 
         public int TransferPokemonKeepAmountHighestCP

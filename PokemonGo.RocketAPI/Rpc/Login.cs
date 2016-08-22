@@ -32,7 +32,7 @@ namespace PokemonGo.RocketAPI.Rpc
                 case AuthType.Google:
                     return new GoogleLogin(settings.GoogleEmail, settings.GooglePassword);
                 case AuthType.Ptc:
-                    return new PtcLogin(settings.PtcUsername, settings.PtcPassword);
+                    return new PtcLogin(settings.PTCUsername, settings.PTCPassword);
                 default:
                     throw new ArgumentOutOfRangeException(nameof(settings.AuthType), "Unknown AuthType");
             }

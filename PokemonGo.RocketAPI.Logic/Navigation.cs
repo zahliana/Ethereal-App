@@ -21,7 +21,7 @@ namespace PokemonGo.RocketAPI.Logic
 
         public static async Task<PlayerUpdateResponse> HumanLikeWalking(GeoUtils targetLocation,Func<Task<bool>> functionExecutedWhileWalking)
         {
-            double walkingSpeedInKilometersPerHour = Logic._client.Settings.WalkingSpeedInKilometerPerHour;
+            double walkingSpeedInKilometersPerHour = Logic._client.Settings.WalkSpeedKPH;
             var speedInMetersPerSecond = walkingSpeedInKilometersPerHour / 3.6;
 
             var sourceLocation = new GeoUtils(Logic._client.CurrentLatitude, Logic._client.CurrentLongitude);
@@ -68,7 +68,7 @@ namespace PokemonGo.RocketAPI.Logic
         {
             var targetLocation = new GeoUtils(Convert.ToDouble(trk.Lat), Convert.ToDouble(trk.Lon));
 
-            double walkingSpeedInKilometersPerHour = Logic._client.Settings.WalkingSpeedInKilometerPerHour;
+            double walkingSpeedInKilometersPerHour = Logic._client.Settings.WalkSpeedKPH;
             var speedInMetersPerSecond = walkingSpeedInKilometersPerHour / 3.6;
 
             var sourceLocation = new GeoUtils(Logic._client.CurrentLatitude, Logic._client.CurrentLongitude);
