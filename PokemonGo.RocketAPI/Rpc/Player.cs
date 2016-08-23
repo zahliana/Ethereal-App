@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Google.Protobuf;
 using PokemonGo.RocketAPI.Extensions;
 using PokemonGo.RocketAPI.Helpers;
+using PokemonGo.RocketAPI.Logic.Utils;
 using POGOProtos.Data.Player;
 using POGOProtos.Enums;
 using POGOProtos.Networking.Requests;
@@ -78,7 +79,7 @@ namespace PokemonGo.RocketAPI.Rpc
 
             _client.CurrentLatitude = latitude;
             _client.CurrentLongitude = longitude;
-            _client.CurrentAltitude = altitude;
+            _client.CurrentAltitude = Altitude.GetAltitude(latitude, longitude);
 
             SaveLatitudeLongitude(latitude, longitude);
         }
