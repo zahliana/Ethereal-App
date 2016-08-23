@@ -86,15 +86,18 @@ namespace PokemonGo.RocketAPI.Console {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public double DefaultAltitude {
-            get {
+        public double DefaultAltitude
+        {
+            get
+            {
                 return ((double)(this["DefaultAltitude"]));
             }
-            set {
+            set
+            {
                 this["DefaultAltitude"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
