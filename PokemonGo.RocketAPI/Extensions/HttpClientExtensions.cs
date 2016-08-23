@@ -39,7 +39,16 @@ namespace PokemonGo.RocketAPI.Extensions
             }
             var loopsOnBadRepsonse = 1;
 
-            await RandomHelper.RandomDelay(500);
+            
+            await RandomHelper.RandomDelay(500, 600);
+            ResponseEnvelope responseX;
+            while ((responseX = await PostProto<TRequest>(client, url, requestEnvelope)).Returns.Count != responseTypes.Length)
+            {
+                throw new InvalidResponseException($"Expected {responseTypes.Length} responses, but got {responseX.Returns.Count} responses");
+            }
+             
+            /*
+            await RandomHelper.RandomDelay(500, 600);
             ResponseEnvelope response = await PostProto<TRequest>(client, url, requestEnvelope);
             while (response.Returns.Count != responseTypes.Length && loopsOnBadRepsonse <= 5)
             {
@@ -48,13 +57,14 @@ namespace PokemonGo.RocketAPI.Extensions
                 response = await PostProto<TRequest>(client, url, requestEnvelope);
                 loopsOnBadRepsonse += 1;
             }
+            */
 
-            if (response.Returns.Count != responseTypes.Length)
-                throw new InvalidResponseException($"Expected {responseTypes.Length} responses, but got {response.Returns.Count} responses");
+            if (responseX.Returns.Count != responseTypes.Length)
+                throw new InvalidResponseException($"Expected {responseTypes.Length} responses, but got {responseX.Returns.Count} responses");
 
             for (var i = 0; i < responseTypes.Length; i++)
             {
-                var payload = response.Returns[i];
+                var payload = responseX.Returns[i];
                 result[i].MergeFrom(payload);
             }
             return result;
@@ -66,6 +76,7 @@ namespace PokemonGo.RocketAPI.Extensions
         {
             Debug.WriteLine($"Requesting {typeof(TResponsePayload).Name}");
             var loopsOnBadRepsonse = 1;
+
 
             await RandomHelper.RandomDelay(500);
             var response = await PostProto<TRequest>(client, url, requestEnvelope);
