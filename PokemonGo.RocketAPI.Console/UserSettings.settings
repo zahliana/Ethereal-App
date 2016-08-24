@@ -12,10 +12,10 @@
       <Value Profile="(Default)">GooglePassword</Value>
     </Setting>
     <Setting Name="PTCUsername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">xxxUnholy</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="PTCPassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">LCPost12</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="DefaultAltitude" Type="System.Double" Scope="User">
       <Value Profile="(Default)">100</Value>
