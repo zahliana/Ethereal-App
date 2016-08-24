@@ -21,10 +21,10 @@
       <Value Profile="(Default)">100</Value>
     </Setting>
     <Setting Name="DefaultLatitude" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">-37.813802</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="DefaultLongitude" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">144.96293</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="WalkSpeedKPH" Type="System.Double" Scope="User">
       <Value Profile="(Default)">5</Value>
