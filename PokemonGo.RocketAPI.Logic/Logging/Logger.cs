@@ -62,7 +62,7 @@ namespace PokemonGo.RocketAPI.Logic.Logging
                     break;
                 case LogLevel.Error:
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"[{dateFormat}] (ERROR) {message}");
+                    Console.WriteLine($"[{dateFormat}] (ERROR) {message}"); //Unknown Error - An Error occured while sending the request from mscorlib
                     Log(string.Concat($"[{dateFormat}] ", message));
                     break;
                 case LogLevel.Debug:

@@ -25,7 +25,7 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Google")]
+        [global::System.Configuration.DefaultSettingValueAttribute("PTC")]
         public string AuthType {
             get {
                 return ((string)(this["AuthType"]));
@@ -61,7 +61,7 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PTCUsername")]
+        [global::System.Configuration.DefaultSettingValueAttribute("xxxUnholy")]
         public string PTCUsername {
             get {
                 return ((string)(this["PTCUsername"]));
@@ -73,7 +73,7 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PTCPassword")]
+        [global::System.Configuration.DefaultSettingValueAttribute("LCPost12")]
         public string PTCPassword {
             get {
                 return ((string)(this["PTCPassword"]));
@@ -86,21 +86,18 @@ namespace PokemonGo.RocketAPI.Console {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public double DefaultAltitude
-        {
-            get
-            {
+        public double DefaultAltitude {
+            get {
                 return ((double)(this["DefaultAltitude"]));
             }
-            set
-            {
+            set {
                 this["DefaultAltitude"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-37.813802")]
         public double DefaultLatitude {
             get {
                 return ((double)(this["DefaultLatitude"]));
@@ -112,7 +109,7 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("144.96293")]
         public double DefaultLongitude {
             get {
                 return ((double)(this["DefaultLongitude"]));

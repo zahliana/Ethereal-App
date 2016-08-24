@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="AuthType" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Google</Value>
+      <Value Profile="(Default)">PTC</Value>
     </Setting>
     <Setting Name="GoogleEmail" Type="System.String" Scope="User">
       <Value Profile="(Default)">GoogleEmail</Value>
@@ -12,19 +12,19 @@
       <Value Profile="(Default)">GooglePassword</Value>
     </Setting>
     <Setting Name="PTCUsername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">PTCUsername</Value>
+      <Value Profile="(Default)">xxxUnholy</Value>
     </Setting>
     <Setting Name="PTCPassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">PTCPassword</Value>
+      <Value Profile="(Default)">LCPost12</Value>
     </Setting>
     <Setting Name="DefaultAltitude" Type="System.Double" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
     <Setting Name="DefaultLatitude" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">-37.813802</Value>
     </Setting>
     <Setting Name="DefaultLongitude" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">144.96293</Value>
     </Setting>
     <Setting Name="WalkSpeedKPH" Type="System.Double" Scope="User">
       <Value Profile="(Default)">5</Value>

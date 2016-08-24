@@ -25,3 +25,30 @@ C:\Users\Michael\Desktop\Pokemon-Go-Ethereal-master\Pokemon-Go-Ethereal-master\P
 C:\Users\Michael\Desktop\Pokemon-Go-Ethereal-master\Pokemon-Go-Ethereal-master\PokemonGo.RocketAPI.Logic\obj\Debug\PokemonGo.RocketAPI.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Michael\Desktop\Pokemon-Go-Ethereal-master\Pokemon-Go-Ethereal-master\PokemonGo.RocketAPI.Logic\obj\Debug\PokemonGo.RocketAPI.Logic.dll
 C:\Users\Michael\Desktop\Pokemon-Go-Ethereal-master\Pokemon-Go-Ethereal-master\PokemonGo.RocketAPI.Logic\obj\Debug\PokemonGo.RocketAPI.Logic.pdb
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\PokemonGo.RocketAPI.Logic.dll.config
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\PokemonGo.RocketAPI.Logic.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\PokemonGo.RocketAPI.Logic.pdb
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\Google.Protobuf.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\POGOProtos.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\Pokemon Go Rocket API.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\GPSOAuthSharp.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\S2Geometry.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\System.Data.HashFunction.xxHash.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\System.Data.HashFunction.Core.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\C5.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\System.Data.HashFunction.Interfaces.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\POGOProtos.pdb
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\Pokemon Go Rocket API.pdb
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\Google.Protobuf.xml
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\S2Geometry.xml
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\System.Data.HashFunction.xxHash.xml
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\System.Data.HashFunction.Core.xml
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\C5.xml
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\bin\Debug\System.Data.HashFunction.Interfaces.xml
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\obj\Debug\PokemonGo.RocketAPI.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\obj\Debug\PokemonGo.RocketAPI.Logic.dll
+C:\Users\Michael\Source\Repos\Pokemon-Go-Ethereal\PokemonGo.RocketAPI.Logic\obj\Debug\PokemonGo.RocketAPI.Logic.pdb

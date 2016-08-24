@@ -39,19 +39,32 @@ namespace PokemonGo.RocketAPI.Extensions
             }
             var loopsOnBadRepsonse = 1;
 
-            await RandomHelper.RandomDelay(500);
+            /*
+            await RandomHelper.RandomDelay(500, 600);
+            ResponseEnvelope response;
+            while ((response = await PostProto<TRequest>(client, url, requestEnvelope)).Returns.Count != responseTypes.Length)
+            {
+                throw new InvalidResponseException($"Expected {responseTypes.Length} responses, but got {response.Returns.Count} responses");
+            }
+            
+             
+            *
+            */
+            await RandomHelper.RandomDelay(500, 600);
             ResponseEnvelope response = await PostProto<TRequest>(client, url, requestEnvelope);
             while (response.Returns.Count != responseTypes.Length && loopsOnBadRepsonse <= 5)
             {
                 //Logger.Write($"Bad Payload Repsonse. Retry {loopsOnBadRepsonse} of 5 <- IGNORE THIS FUCKING MESSAGE...I KNOW IT", LogLevel.Warning);
-                await RandomHelper.RandomDelay(250, 500);
+                await RandomHelper.RandomDelay(500, 600);
                 response = await PostProto<TRequest>(client, url, requestEnvelope);
                 loopsOnBadRepsonse += 1;
             }
+            
 
             if (response.Returns.Count != responseTypes.Length)
                 throw new InvalidResponseException($"Expected {responseTypes.Length} responses, but got {response.Returns.Count} responses");
 
+             
             for (var i = 0; i < responseTypes.Length; i++)
             {
                 var payload = response.Returns[i];
@@ -61,20 +74,23 @@ namespace PokemonGo.RocketAPI.Extensions
         }
 
         public static async Task<TResponsePayload> PostProtoPayload<TRequest, TResponsePayload>(this System.Net.Http.HttpClient client,
-            string url, RequestEnvelope requestEnvelope) where TRequest : IMessage<TRequest>
+            string url, RequestEnvelope requestEnvelope, Client rpcClient) where TRequest : IMessage<TRequest>
             where TResponsePayload : IMessage<TResponsePayload>, new()
         {
             Debug.WriteLine($"Requesting {typeof(TResponsePayload).Name}");
             var loopsOnBadRepsonse = 1;
 
-            await RandomHelper.RandomDelay(500);
+
+            await RandomHelper.RandomDelay(500, 600);
             var response = await PostProto<TRequest>(client, url, requestEnvelope);
             while (response.Returns.Count == 0 && loopsOnBadRepsonse <= 5)
             {
                 //Logger.Write($"Bad Payload Repsonse. Retry {loopsOnBadRepsonse} of 5 <- IGNORE THIS FUCKING MESSAGE...I KNOW IT", LogLevel.Warning);
+
                 await RandomHelper.RandomDelay(250, 500);
                 response = await PostProto<TRequest>(client, url, requestEnvelope);
-                loopsOnBadRepsonse += 1;    
+                loopsOnBadRepsonse += 1;
+                await rpcClient.Login.DoLogin();
             }
 
             if (response.Returns.Count == 0)
