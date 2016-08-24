@@ -3,10 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="Username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Anthurias</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Welkom#1</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="DefaultAltitude" Type="System.Double" Scope="User">
       <Value Profile="(Default)">100</Value>
