@@ -25,61 +25,25 @@ namespace PokemonGo.RocketAPI.Console {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PTC")]
-        public string AuthType {
+        [global::System.Configuration.DefaultSettingValueAttribute("Anthurias")]
+        public string Username {
             get {
-                return ((string)(this["AuthType"]));
+                return ((string)(this["Username"]));
             }
             set {
-                this["AuthType"] = value;
+                this["Username"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("GoogleEmail")]
-        public string GoogleEmail {
+        [global::System.Configuration.DefaultSettingValueAttribute("Welkom#1")]
+        public string Password {
             get {
-                return ((string)(this["GoogleEmail"]));
+                return ((string)(this["Password"]));
             }
             set {
-                this["GoogleEmail"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("GooglePassword")]
-        public string GooglePassword {
-            get {
-                return ((string)(this["GooglePassword"]));
-            }
-            set {
-                this["GooglePassword"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("xxxUnholy")]
-        public string PTCUsername {
-            get {
-                return ((string)(this["PTCUsername"]));
-            }
-            set {
-                this["PTCUsername"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("LCPost12")]
-        public string PTCPassword {
-            get {
-                return ((string)(this["PTCPassword"]));
-            }
-            set {
-                this["PTCPassword"] = value;
+                this["Password"] = value;
             }
         }
         

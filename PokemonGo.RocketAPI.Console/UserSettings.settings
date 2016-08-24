@@ -2,20 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PokemonGo.RocketAPI.Console" GeneratedClassName="UserSettings">
   <Profiles />
   <Settings>
-    <Setting Name="AuthType" Type="System.String" Scope="User">
-      <Value Profile="(Default)">PTC</Value>
+    <Setting Name="Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Anthurias</Value>
     </Setting>
-    <Setting Name="GoogleEmail" Type="System.String" Scope="User">
-      <Value Profile="(Default)">GoogleEmail</Value>
-    </Setting>
-    <Setting Name="GooglePassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">GooglePassword</Value>
-    </Setting>
-    <Setting Name="PTCUsername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">xxxUnholy</Value>
-    </Setting>
-    <Setting Name="PTCPassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">LCPost12</Value>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Welkom#1</Value>
     </Setting>
     <Setting Name="DefaultAltitude" Type="System.Double" Scope="User">
       <Value Profile="(Default)">100</Value>

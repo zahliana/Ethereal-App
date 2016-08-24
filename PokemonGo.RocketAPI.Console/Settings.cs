@@ -23,34 +23,22 @@ namespace PokemonGo.RocketAPI.Console
         [XmlIgnore]
         private readonly string _configsPath = Path.Combine(Directory.GetCurrentDirectory(), "Settings");
 
+        [XmlIgnore]
         public AuthType AuthType
         {
-            get { return (AuthType)Enum.Parse(typeof(AuthType), UserSettings.Default.AuthType, true); }
-            set { UserSettings.Default.AuthType = value.ToString(); }
+            get { return Username.Contains("@") ? AuthType.Google : AuthType.Ptc; }
         }
 
-        public string PTCUsername
+        public string Username
         {
-            get { return UserSettings.Default.PTCUsername; }
-            set { UserSettings.Default.PTCUsername = value; }
+            get { return UserSettings.Default.Username; }
+            set { UserSettings.Default.Username = value; }
         }
 
-        public string PTCPassword
+        public string Password
         {
-            get { return UserSettings.Default.PTCPassword; }
-            set { UserSettings.Default.PTCPassword = value; }
-        }
-
-        public string GoogleEmail
-        {
-            get { return UserSettings.Default.GoogleEmail; }
-            set { UserSettings.Default.GoogleEmail = value; }
-        }
-
-        public string GooglePassword
-        {
-            get { return UserSettings.Default.GooglePassword; }
-            set { UserSettings.Default.GooglePassword = value; }
+            get { return UserSettings.Default.Password; }
+            set { UserSettings.Default.Password = value; }
         }
 
         public double DefaultLatitude
