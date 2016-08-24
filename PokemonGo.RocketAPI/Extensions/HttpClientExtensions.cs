@@ -25,7 +25,7 @@ namespace PokemonGo.RocketAPI.Extensions
     public static class HttpClientExtensions
     {
         public static async Task<IMessage[]> PostProtoPayload<TRequest>(this System.Net.Http.HttpClient client, 
-            string url, RequestEnvelope requestEnvelope,
+            string url, RequestEnvelope requestEnvelope, Client rpcClient,
             params Type[] responseTypes) where TRequest : IMessage<TRequest>
         {
             var result = new IMessage[responseTypes.Length];
@@ -46,10 +46,8 @@ namespace PokemonGo.RocketAPI.Extensions
             {
                 throw new InvalidResponseException($"Expected {responseTypes.Length} responses, but got {response.Returns.Count} responses");
             }
-            
-             
-            *
             */
+
             await RandomHelper.RandomDelay(500, 600);
             ResponseEnvelope response = await PostProto<TRequest>(client, url, requestEnvelope);
             while (response.Returns.Count != responseTypes.Length && loopsOnBadRepsonse <= 5)
@@ -58,9 +56,10 @@ namespace PokemonGo.RocketAPI.Extensions
                 await RandomHelper.RandomDelay(500, 600);
                 response = await PostProto<TRequest>(client, url, requestEnvelope);
                 loopsOnBadRepsonse += 1;
+                await rpcClient.Login.DoLogin();
             }
             
-
+            //error thrown here.
             if (response.Returns.Count != responseTypes.Length)
                 throw new InvalidResponseException($"Expected {responseTypes.Length} responses, but got {response.Returns.Count} responses");
 

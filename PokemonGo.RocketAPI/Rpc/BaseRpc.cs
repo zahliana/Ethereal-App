@@ -74,7 +74,7 @@ namespace PokemonGo.RocketAPI.Rpc
         
         protected async Task<IMessage[]> PostProtoPayload<TRequest>(RequestEnvelope requestEnvelope, params Type[] responseTypes) where TRequest : IMessage<TRequest>
         {
-            return await _client.PokemonHttpClient.PostProtoPayload<TRequest>(ApiUrl, requestEnvelope, responseTypes);
+            return await _client.PokemonHttpClient.PostProtoPayload<TRequest>(ApiUrl, requestEnvelope, _client, responseTypes);
         }
 
         protected async Task<ResponseEnvelope> PostProto<TRequest>(RequestEnvelope requestEnvelope) where TRequest : IMessage<TRequest>

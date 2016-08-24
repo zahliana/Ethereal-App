@@ -130,7 +130,7 @@ namespace PokemonGo.RocketAPI.Helpers
                 sig.RequestHash.Add(BitConverter.ToUInt64(x.ComputeHash(request.ToByteArray()), 0));
 
             sig.Unk22 = ByteString.CopyFrom(new byte[16] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F });
-            sig.Unk25 = BitConverter.ToUInt32(new System.Data.HashFunction.xxHash(64, 0x88533787).ComputeHash(System.Text.Encoding.ASCII.GetBytes("\"b8fa9757195897aae92c53dbcf8a60fb3d86d745\"")), 0);
+            sig.Unk25 = BitConverter.ToUInt32(new System.Data.HashFunction.xxHash(64, 0x88533787).ComputeHash(System.Text.Encoding.ASCII.GetBytes("\"0f15301fe1d0e824738ef5d93355e56a6fb910d4\"")), 0);
             
             return val;
         }
