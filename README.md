@@ -1,2 +1,2 @@
 # Ethereal Application for Educational Purposes
-Currently working on a mainframe structure to have a stabilized connection with no interruptions.
+This branch is managed by Raitaru, Currently working on a login settings tweak to remove the AuthType field and the double user/pass fields.
